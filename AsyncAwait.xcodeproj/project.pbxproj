@@ -13,6 +13,13 @@
 		5B5D544226DA7E7D00ACE02B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5D544026DA7E7D00ACE02B /* Main.storyboard */; };
 		5B5D544426DA7E7E00ACE02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5D544326DA7E7E00ACE02B /* Assets.xcassets */; };
 		5B5D544726DA7E7E00ACE02B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5D544526DA7E7E00ACE02B /* LaunchScreen.storyboard */; };
+		5B5D545526DAA4E400ACE02B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5D545426DAA4E400ACE02B /* Post.swift */; };
+		5BFAA2C126E500EF005F587C /* EnumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAA2C026E500EF005F587C /* EnumHelper.swift */; };
+		5BFAA2C426E503DD005F587C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAA2C326E503DD005F587C /* PostTableViewCell.swift */; };
+		5BFB831226E4A141005D4710 /* PostViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB831126E4A141005D4710 /* PostViewModal.swift */; };
+		5BFB831526E4A222005D4710 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB831426E4A222005D4710 /* APIService.swift */; };
+		5BFB831726E4A25D005D4710 /* APIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB831626E4A25D005D4710 /* APIBuilder.swift */; };
+		5BFB831A26E4ABB7005D4710 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB831926E4ABB7005D4710 /* PostService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		5B5D544326DA7E7E00ACE02B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B5D544626DA7E7E00ACE02B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5D544826DA7E7E00ACE02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B5D545426DAA4E400ACE02B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5BFAA2C026E500EF005F587C /* EnumHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHelper.swift; sourceTree = "<group>"; };
+		5BFAA2C326E503DD005F587C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		5BFB831126E4A141005D4710 /* PostViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModal.swift; sourceTree = "<group>"; };
+		5BFB831426E4A222005D4710 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		5BFB831626E4A25D005D4710 /* APIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilder.swift; sourceTree = "<group>"; };
+		5BFB831926E4ABB7005D4710 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,102 @@
 		5B5D543926DA7E7D00ACE02B /* AsyncAwait */ = {
 			isa = PBXGroup;
 			children = (
-				5B5D543A26DA7E7D00ACE02B /* AppDelegate.swift */,
-				5B5D543C26DA7E7D00ACE02B /* SceneDelegate.swift */,
-				5B5D543E26DA7E7D00ACE02B /* ViewController.swift */,
-				5B5D544026DA7E7D00ACE02B /* Main.storyboard */,
-				5B5D544326DA7E7E00ACE02B /* Assets.xcassets */,
-				5B5D544526DA7E7E00ACE02B /* LaunchScreen.storyboard */,
-				5B5D544826DA7E7E00ACE02B /* Info.plist */,
+				5BFAA2BF26E500C4005F587C /* Utils */,
+				5BFB831326E4A19A005D4710 /* Network */,
+				5B5D545326DA7F3200ACE02B /* Assets */,
+				5B5D545226DA7F2400ACE02B /* AppConfig */,
+				5B5D545126DA7F0D00ACE02B /* Modal */,
+				5B5D545026DA7EEE00ACE02B /* ViewController */,
+				5B5D544F26DA7EE600ACE02B /* View */,
+				5B5D544E26DA7EDB00ACE02B /* ViewModal */,
 			);
 			path = AsyncAwait;
+			sourceTree = "<group>";
+		};
+		5B5D544E26DA7EDB00ACE02B /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				5BFB831126E4A141005D4710 /* PostViewModal.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		5B5D544F26DA7EE600ACE02B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BFAA2C226E501E9005F587C /* TableViewCells */,
+				5B5D544526DA7E7E00ACE02B /* LaunchScreen.storyboard */,
+				5B5D544026DA7E7D00ACE02B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B5D545026DA7EEE00ACE02B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B5D543E26DA7E7D00ACE02B /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5B5D545126DA7F0D00ACE02B /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				5B5D545426DAA4E400ACE02B /* Post.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		5B5D545226DA7F2400ACE02B /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				5B5D543A26DA7E7D00ACE02B /* AppDelegate.swift */,
+				5B5D543C26DA7E7D00ACE02B /* SceneDelegate.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		5B5D545326DA7F3200ACE02B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5B5D544326DA7E7E00ACE02B /* Assets.xcassets */,
+				5B5D544826DA7E7E00ACE02B /* Info.plist */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		5BFAA2BF26E500C4005F587C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5BFAA2C026E500EF005F587C /* EnumHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5BFAA2C226E501E9005F587C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5BFAA2C326E503DD005F587C /* PostTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		5BFB831326E4A19A005D4710 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5BFB831826E4AB9E005D4710 /* Services */,
+				5BFB831426E4A222005D4710 /* APIService.swift */,
+				5BFB831626E4A25D005D4710 /* APIBuilder.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5BFB831826E4AB9E005D4710 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5BFB831926E4ABB7005D4710 /* PostService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BFB831226E4A141005D4710 /* PostViewModal.swift in Sources */,
 				5B5D543F26DA7E7D00ACE02B /* ViewController.swift in Sources */,
+				5BFB831526E4A222005D4710 /* APIService.swift in Sources */,
+				5BFB831A26E4ABB7005D4710 /* PostService.swift in Sources */,
 				5B5D543B26DA7E7D00ACE02B /* AppDelegate.swift in Sources */,
+				5BFAA2C126E500EF005F587C /* EnumHelper.swift in Sources */,
 				5B5D543D26DA7E7D00ACE02B /* SceneDelegate.swift in Sources */,
+				5BFAA2C426E503DD005F587C /* PostTableViewCell.swift in Sources */,
+				5B5D545526DAA4E400ACE02B /* Post.swift in Sources */,
+				5BFB831726E4A25D005D4710 /* APIBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AsyncAwait/Info.plist;
+				INFOPLIST_FILE = AsyncAwait/Assets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AsyncAwait/Info.plist;
+				INFOPLIST_FILE = AsyncAwait/Assets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
